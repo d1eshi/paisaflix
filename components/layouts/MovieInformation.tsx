@@ -28,6 +28,7 @@ export const MovieInformation: FC<Props> = ({ movieData }) => {
                 .fill('')
                 .map((_, i) => (
                   <StarIcon
+                    key={i}
                     mr={2}
                     color={i < movieData.rating ? 'yellow' : 'gray.300'}
                   />
@@ -93,7 +94,12 @@ export const MovieInformation: FC<Props> = ({ movieData }) => {
             zIndex="1"
             transform="matrix(-1, 0, 0, 1, 0, 0)"
           ></Box>
-          <Image src={movieData.coverImage} width="100%" maxH="869px" />
+          <Image
+            src={movieData.coverImage}
+            alt={movieData.name}
+            width="100%"
+            maxH="869px"
+          />
         </Box>
       </Grid>
     </>

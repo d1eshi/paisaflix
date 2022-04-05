@@ -29,7 +29,11 @@ export const HeroMovie: FC<Props> = ({ heroData, trailersData }) => {
         </Text>
         <Box display="flex" gap="2" minW="100%" w="100%" mt={6}>
           {trailersData.map((trailer, i) => (
-            <MovieTrailerItem trailerData={trailer} number={i} />
+            <MovieTrailerItem
+              key={trailer._id}
+              trailerData={trailer}
+              number={i}
+            />
           ))}
         </Box>
       </Box>

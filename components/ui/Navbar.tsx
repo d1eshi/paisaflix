@@ -50,8 +50,8 @@ export const Navbar = () => {
         </Box>
 
         {menuItems.map((item, index) => (
-          <HStack direction={['column', 'row']} spacing="2.5em">
-            <ActiveLink key={index} text={item.text} href={item.href} />
+          <HStack key={index} direction={['column', 'row']} spacing="2.5em">
+            <ActiveLink text={item.text} href={item.href} />
           </HStack>
         ))}
       </Box>
